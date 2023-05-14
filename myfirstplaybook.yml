@@ -1,15 +1,20 @@
 ---
 - hosts: all
+  become: yes 
   tasks: 
   - name: I want to ping all nodes
     ping:
   - name: I want to install webserver on ubuntu ansible server
     apt:
      name: apache2
-     state: present
+     state: absent
 
   - name: I want to install tree on ubuntu anible nodes
     apt:
       name: tree
+      state: absent
+  - name: I want to install wget on ubuntu anible nodes
+    apt:
+      name: wget
       state: present
   
