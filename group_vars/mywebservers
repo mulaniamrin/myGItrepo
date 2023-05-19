@@ -2,4 +2,4 @@
  mywebpackonubantu:  apache2
  mywebpackonredhat: httpd
  myjavaubuntu: openjdk-8-jdk
- myjavaredhat: java-1.8.0-openjdk
+ myjavaredhat: java-1.8.0-amazon-corretto-devel
