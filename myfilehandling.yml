@@ -1,0 +1,11 @@
+---
+- hosts: 172.31.34.97
+  become: yes
+  tasks:
+  - include: myfile.yml
+
+  - name: I want to install webser
+    apt: 
+      name: apache2
+      state: present    
+
