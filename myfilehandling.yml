@@ -7,5 +7,9 @@
   - name: I want to install webser
     apt: 
       name: apache2
-      state: present    
+      state: present   
+  - name: copy index file into node side
+    copy: 
+      src: myindexpage
+      dest: /var/www/html/index.html      
 
