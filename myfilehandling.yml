@@ -18,7 +18,13 @@
     template:
       src: mydynoindex.j2
       dest: /var/www/html/index.html 
-    notify: restartwebserver 
+    notify: restartwebserver
+
+  - name: download file
+    get_url: 
+      url: https://mirrors.tuna.tsinghua.edu.cn/jenkins/war-stable/2.387.3/jenkins.war 
+      dest: /home/ubuntu/jenkins.msi
+      force_basic_auth: yes   
 
 
   handlers:     
