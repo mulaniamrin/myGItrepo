@@ -18,7 +18,7 @@
     template:
       src: mydynoindex.j2
       dest: /var/www/html/index.html 
-    notify: restartwebserver  
+    notify: restartwebserver 
 
 
   handlers:     
