@@ -4,7 +4,7 @@
   tasks:
   - include: myfile.yml
 
-  - name: I want to install webser
+  - name: I want to install webserver
     apt: 
       name: apache2
       state: present   
@@ -22,8 +22,8 @@
 
   - name: download file
     get_url: 
-      url: https://mirrors.tuna.tsinghua.edu.cn/jenkins/war-stable/2.387.3/jenkins.war 
-      dest: /home/ubuntu/jenkins.msi
+      url: https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz
+      dest: /home/ubuntu/apache-tomcat-10.0.20.tar.gz
       force_basic_auth: yes   
 
 
