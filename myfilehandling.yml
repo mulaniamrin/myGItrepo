@@ -11,10 +11,19 @@
   - name: copy index file into node side
     copy: 
       src: myindexpage
-      dest: /var/www/html/index.html    
+      dest: /var/www/html/index.html  
+    notify: restartwebserver    
 
   - name: copy dyno files into nodes
     template:
       src: mydynoindex.j2
-      dest: /var/www/html/index.html      
+      dest: /var/www/html/index.html 
+    notify: restartwebserver  
+
+
+  handlers:     
+  - name: restartwebserver
+    service:
+      name: apache2
+      state: restarted     
 
