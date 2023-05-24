@@ -26,7 +26,6 @@
       dest: /home/ubuntu/apache-tomcat-10.0.20.tar.gz
       force_basic_auth: yes   
 
-
   handlers:     
   - name: restartwebserver
     service:
