@@ -5,4 +5,10 @@
      dest: /opt/tomcat/webapps
      force_basic_auth: yes
 
+- name: deploy java application on webapps 
+  get_url:
+    url: https://amrin24may23.s3.us-east-2.amazonaws.com/gameoflife.war
+    dest: /opt/tomcat/webapps/gameoflife.war
+    force_basic_auth: yes     
+
   
