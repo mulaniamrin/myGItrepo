@@ -1,6 +1,6 @@
 ---
 - name: grant tomcat ownership over the extracted folders
-  command:  sudo chown -R tomcat:tomcat /opt/tomcat/
+  command: sudo chown -R tomcat:tomcat /opt/tomcat/
 
 - name: grand extract permission on bin folder
   command: sudo chmod -R u+x /opt/tomcat/bin
